@@ -1,2 +1,14 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h1>Pages</h1>
+<p>pages here</p>
+<%# this is my loop % ar non echoing %>
+
+<% @pages.each do |page| %>
+  <h2><%= page.title%></h2>
+<% end %>
+
+<%# @pages.each do |page|
+ # do stuf on page
+end %>
+
+
+
