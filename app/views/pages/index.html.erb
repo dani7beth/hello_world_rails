@@ -1,9 +1,13 @@
 <h1>Pages</h1>
 <p>pages here</p>
+<%= link_to 'new page', new_page_path %>
 <%# this is my loop % ar non echoing %>
 
 <% @pages.each do |page| %>
   <h2><%= page.title%></h2>
+  <%= link_to 'Show Page',  page_path(page)%>
+  <%= link_to 'Edit Page', edit_page_path(page)%>
+  <%= link_to 'Delete Page', page_path(page), method: :delete%>
 <% end %>
 
 <%# @pages.each do |page|
